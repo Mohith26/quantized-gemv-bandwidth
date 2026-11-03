@@ -1,0 +1,44 @@
+threads=1 copy=129.9 GB/s triad=121.4 GB/s
+threads=4 copy=205.9 GB/s triad=205.6 GB/s
+threads=8 copy=223.8 GB/s triad=227.3 GB/s
+threads=12 copy=231.1 GB/s triad=224.8 GB/s
+threads=1 matrix=8192x16384 model_params=8e+09
+fmt      ms/gemv     MiB(W)       W GB/s tok/s@model max_rel_err
+fp32        8.44        512         63.6         2.0   3.6e-06
+fp16        4.98        256         53.9         3.4   8.7e-07
+int8        7.29        128         18.4         2.3   1.3e-05
+int4       22.41         80          3.7         0.7   9.8e-06
+int4s      12.60         80          6.7         1.3   1.3e-06
+i8q8        4.48        128         29.9         3.7   1.0e-05
+i4q8       38.30         80          2.2         0.4   2.3e-07
+i4q8n       4.87         80         17.2         3.4   6.3e-07
+threads=4 matrix=8192x16384 model_params=8e+09
+fmt      ms/gemv     MiB(W)       W GB/s tok/s@model max_rel_err
+fp32        3.59        512        149.4         4.7   3.6e-06
+fp16        1.80        256        149.0         9.3   8.7e-07
+int8        2.01        128         66.9         8.4   1.3e-05
+int4        6.44         80         13.0         2.6   9.8e-06
+int4s       3.77         80         22.3         4.5   1.3e-06
+i8q8        1.32        128        101.9        12.7   1.0e-05
+i4q8       10.62         80          7.9         1.6   2.3e-07
+i4q8n       1.47         80         56.9        11.4   6.3e-07
+threads=8 matrix=8192x16384 model_params=8e+09
+fmt      ms/gemv     MiB(W)       W GB/s tok/s@model max_rel_err
+fp32        2.62        512        204.9         6.4   3.6e-06
+fp16        1.37        256        195.5        12.2   8.7e-07
+int8        1.23        128        108.7        13.6   1.3e-05
+int4        3.59         80         23.4         4.7   9.8e-06
+int4s       1.93         80         43.6         8.7   1.3e-06
+i8q8        0.80        128        168.2        21.0   1.0e-05
+i4q8        5.46         80         15.4         3.1   2.3e-07
+i4q8n       0.79         80        106.6        21.3   6.3e-07
+threads=12 matrix=8192x16384 model_params=8e+09
+fmt      ms/gemv     MiB(W)       W GB/s tok/s@model max_rel_err
+fp32        2.49        512        216.0         6.8   3.6e-06
+fp16        1.36        256        196.9        12.3   8.7e-07
+int8        0.89        128        151.5        18.9   1.3e-05
+int4        2.50         80         33.6         6.7   9.8e-06
+int4s       1.48         80         56.7        11.3   1.3e-06
+i8q8        0.71        128        189.6        23.7   1.0e-05
+i4q8        4.07         80         20.6         4.1   2.3e-07
+i4q8n       0.65         80        129.7        25.9   6.3e-07
