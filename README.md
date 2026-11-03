@@ -60,8 +60,9 @@ What I took from it:
   column is an upper bound from weight reads only.
 - The plain C kernels rely on clang `-O3 -ffast-math` auto-vectorization; they are not tuned like
   llama.cpp or a GPU kernel. Results on another machine or compiler will differ.
-- Other processes were running on the machine during these runs, so numbers vary by roughly 10%
-  between runs.
+- Other processes were running on the machine during these runs, so numbers vary between runs
+  (most for the int4 SDOT kernel: 130 to 150 GB/s across runs at 8 to 12 threads). The ordering of
+  the kernels stayed the same.
 
 ## Run it
 
